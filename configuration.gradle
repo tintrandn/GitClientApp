@@ -1,0 +1,14 @@
+ext.appVersion = [
+        versionCode: 1,
+        versionName: '1.0',
+]
+
+ext.sdk = [
+        compileSdkVersion: 28,
+        minSdkVersion    : 21,
+        targetSdkVersion : 28,
+]
+
+ext.appDetails = [
+        applicationId: "com.example.git"
+]

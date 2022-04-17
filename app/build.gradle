@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion sdk.compileSdkVersion
+    defaultConfig {
+        applicationId appDetails.applicationId
+        minSdkVersion sdk.minSdkVersion
+        targetSdkVersion sdk.targetSdkVersion
+        versionCode appVersion.versionCode
+        versionName appVersion.versionName
+        testInstrumentationRunner "com.example.git.ui.main.mockconfig.MockRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+        androidTest.java.srcDirs += 'src/androidTest/kotlin'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':network')
+    implementation project(':service')
+
+    implementation libraries.kotlinLib
+    implementation libraries.androidSupportAppCompat
+    implementation libraries.androidSupportDesign
+    implementation libraries.constraintLayout
+    implementation libraries.glideImageApi
+
+    implementation libraries.rxJava
+    implementation libraries.rxAndroid
+    implementation libraries.rxbinding
+    implementation libraries.retrofit
+    implementation libraries.retrofitGsonConverter
+
+    implementation libraries.dagger
+    implementation libraries.daggerAndroid
+    implementation libraries.daggerAndroidSupport
+
+    kapt compilers.dagger
+    kapt compilers.daggerAndroid
+
+    androidTestImplementation uiText.espresso
+    androidTestImplementation uiText.espressoTestRunner
+    androidTestImplementation uiText.espressoRules
+    androidTestImplementation uiText.espressoJUnit
+    androidTestImplementation uiText.espressoContrib
+    androidTestImplementation uiText.okhttpMockWebServer
+    androidTestImplementation uiText.rxIdler
+
+    testImplementation unitText.junit
+    testImplementation unitText.mockito
+    testImplementation unitText.assertj
+}
+
+androidExtensions {
+    experimental = true
+}

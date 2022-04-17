@@ -1,0 +1,92 @@
+ext.versions = [
+        kotlin            : '1.3.31',
+        androidSupport    : '1.0.2',
+        androidMaterial   : '1.0.0',
+        androidMultidex   : '1.0.3',
+        googleLocation    : '16.0.0',
+        constraintLayout  : '2.1.3',
+        rxJava            : '2.2.8',
+        rxAndroid         : '2.1.1',
+        rxbinding         : '2.2.0',
+        rxIdler           : '0.9.1',
+        okhttp            : '3.14.1',
+        retrofit          : '2.5.0',
+        dagger            : '2.40.5',
+        jsr250            : '1.0',
+        gson              : '2.8.5',
+        glideApi          : '4.10.0',
+
+        leakCanary        : '1.6.3',
+        espresso          : '3.1.1',
+        espressoTestRunner: '1.1.1',
+        espressoRules     : '1.1.1',
+        espressoJUnit     : '1.1.0',
+        espressoContrib   : '3.4.0',
+        mockito           : '2.27.0',
+        junit             : '4.12',
+        assertj           : '3.12.2'
+]
+
+ext.libraries = [
+        kotlinLib                : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin",
+
+        androidSupportAppCompat  : "androidx.appcompat:appcompat:$versions.androidSupport",
+        androidSupportCardView   : "com.android.support:cardview-v7:$versions.androidSupport",
+        androidSupportAnnotations: "com.android.support:support-annotations:$versions.androidSupport",
+        androidSupportMultiDex   : "com.android.support:multidex:$versions.androidMultidex",
+
+        androidSupportDesign     : "com.google.android.material:material:$versions.androidMaterial",
+        constraintLayout         : "androidx.constraintlayout:constraintlayout:$versions.constraintLayout",
+        googleLocation           : "com.google.android.gms:play-services-location:$versions.googleLocation",
+        glideImageApi            : "com.github.bumptech.glide:glide:$versions.glideApi",
+        glideImageCompiler       : "com.github.bumptech.glide:compiler:$versions.glideApi",
+
+        rxAndroid                : "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid",
+        rxJava                   : "io.reactivex.rxjava2:rxjava:$versions.rxJava",
+        rxbinding                : "com.jakewharton.rxbinding2:rxbinding-kotlin:$versions.rxbinding",
+
+        okhttpLoggingInterceptor : "com.squareup.okhttp3:logging-interceptor:$versions.okhttp",
+        retrofit                 : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+        retrofitGsonConverter    : "com.squareup.retrofit2:converter-gson:$versions.retrofit",
+        retrofitRxJavaAdapter    : "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit",
+
+        dagger                   : "com.google.dagger:dagger:$versions.dagger",
+        daggerAndroid            : "com.google.dagger:dagger-android:$versions.dagger",
+        daggerAndroidSupport     : "com.google.dagger:dagger-android-support:$versions.dagger",
+
+        gson                     : "com.google.code.gson:gson:$versions.gson",
+]
+
+ext.debugLibraries = [
+        leakCanary: "com.squareup.leakcanary:leakcanary-android:$versions.leakCanary",
+]
+
+ext.releaseLibraries = [
+        leakCanary: "com.squareup.leakcanary:leakcanary-android-no-op:$versions.leakCanary",
+]
+
+ext.annotations = [
+        jsr250: "javax.annotation:jsr250-api:$versions.jsr250",
+]
+
+ext.compilers = [
+        dagger       : "com.google.dagger:dagger-compiler:$versions.dagger",
+        daggerAndroid: "com.google.dagger:dagger-android-processor:$versions.dagger",
+        roomDb       : "androidx.room:room-compiler:$versions.roomDb",
+]
+
+ext.uiText = [
+        espresso           : "androidx.test.espresso:espresso-core:$versions.espresso",
+        espressoTestRunner : "androidx.test:runner:$versions.espressoTestRunner",
+        espressoRules      : "androidx.test:rules:$versions.espressoRules",
+        espressoJUnit      : "androidx.test.ext:junit:$versions.espressoJUnit",
+        espressoContrib    : "androidx.test.espresso:espresso-contrib:$versions.espressoContrib",
+        okhttpMockWebServer: "com.squareup.okhttp3:mockwebserver:$versions.okhttp",
+        rxIdler            : "com.squareup.rx.idler:rx2-idler:$versions.rxIdler",
+]
+
+ext.unitText = [
+        mockito: "org.mockito:mockito-inline:$versions.mockito",
+        junit  : "junit:junit:$versions.junit",
+        assertj: "org.assertj:assertj-core:$versions.assertj",
+]
