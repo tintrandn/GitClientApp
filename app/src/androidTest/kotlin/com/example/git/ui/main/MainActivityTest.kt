@@ -40,7 +40,11 @@ class MainActivityTest {
         mainActivityRobot
             .inputUserName("madaza13")
             .onSearchButtonClick()
-            .seesUser(0, "madaza13", "1")
+            .seesUser(0, "madaza13", "Score: 1")
+
+
+        intended(hasComponent(
+            PassengerDetailsSummaryActivity::class.java.name))
     }
 
 }
